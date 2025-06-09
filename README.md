@@ -10,7 +10,7 @@
 ## 第8講目の演習課題
 ### 課題内容
 授業資料を参照して、下記作業を実施せよ。
-また、Swagger UIでタスクの登録処理（POST /tasks）の実行画面のスクリーンショット（VS Codeでのサーバ起動画面含む）をWebClassに提出せよ。
+また、Swagger UIでタスクの登録処理（POST /tasks）の実行画面のスクリーンショット（VS Codeまたはコマンドプロンプト等でのサーバ起動画面含む）をWebClassに提出せよ。
 * スキーマ（api/schemas/task.py）の定義
 * ルーター（api/routers/task.py, done.py）の修正
 * Swagger UIでの動作確認
