@@ -1,3 +1,14 @@
+## 第10講目の演習課題
+### 課題内容
+授業資料を参照して、下記作業を実施せよ。
+また、CRUD処理を実装し、タスク登録用APIのSwagger UI実行画面のスクリーンショット（VS Codeまたはコマンドプロンプトでサーバ起動を含む）を提出せよ。
+* CRUDのDB操作処理（api/cruds/task.py, api/cruds/done.py）
+* 上記に対応するルーター処理（api/routers/task.py, api/routers/done.py）
+* 上記に対応するスキーマ処理（api/schemas/done.py）
+
+### 期限
+* 2025年6月30日（月）12時25分
+
 ## 第9講目の演習課題
 ### 課題内容
 授業資料を参照して、下記作業を実施せよ。
@@ -31,20 +42,29 @@
 ### 期限
 * 2025年6月9日（月）12時25分
 
-## ディレクトリ構成（第9講目 課題時点）
+## ディレクトリ構成（第10講目 課題時点）
 <pre>
 kadai07/
 ├── api/
-│   ├── cruds
-│   ├── models/
-│   │   └── task.py
-│   ├── routers/
+│   ├── _init__.py
+│   ├── db.py
+│   ├── main.py
+│   ├── migrate_db.py
+│   ├── cruds/
+│   │   ├── __init__.py
 │   │   ├── done.py
 │   │   └── task.py
-│   ├── schemas/
+│   ├── models/
+│   │   ├── __init__.py
 │   │   └── task.py
-│   ├── db.py
-│   └── migrate_db.py
+│   ├── routers/
+│   │   ├── __init__.py
+│   │   ├── done.py
+│   │   └── task.py
+│   └── schemas/
+│       ├── __init__.py
+│       ├── done.py
+│       └── task.py
 ├── docker-compose.yaml
 └── Dockerfile
 </pre>
