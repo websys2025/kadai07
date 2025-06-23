@@ -125,3 +125,8 @@ button[type="submit"]:hover {
   border: 1px solid #bdbdbd;
   margin-right: 0.3em;
 }
+
+.action-btn .material-icons {
+  font-size: 1.3em;
+  vertical-align: middle;
+}

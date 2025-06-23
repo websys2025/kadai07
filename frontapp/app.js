@@ -37,7 +37,7 @@ async function loadTasks() {
         const doneBtn = document.createElement("button");
         doneBtn.className = "action-btn";
         doneBtn.title = task.done ? "未完了に戻す" : "完了にする";
-        doneBtn.innerHTML = task.done ? "↩" : "✔";
+        doneBtn.innerHTML = `<span class="material-icons">${task.done ? "check_box" : "check_box_outline_blank"}</span>`;
         doneBtn.onclick = async () => {
             if (task.done) {
                 await fetch(`${API_BASE}/tasks/${task.id}/done`, { method: "DELETE" });
@@ -52,7 +52,7 @@ async function loadTasks() {
         const editBtn = document.createElement("button");
         editBtn.className = "action-btn";
         editBtn.title = "編集";
-        editBtn.innerHTML = "✏";
+        editBtn.innerHTML = `<span class="material-icons">edit</span>`;
         editBtn.onclick = () => startEditTask(li, task);
         actions.appendChild(editBtn);
 
@@ -60,7 +60,7 @@ async function loadTasks() {
         const delBtn = document.createElement("button");
         delBtn.className = "action-btn";
         delBtn.title = "削除";
-        delBtn.innerHTML = "🗑";
+        delBtn.innerHTML = `<span class="material-icons">delete</span>`;
         delBtn.onclick = async () => {
             if (confirm("削除してもよいですか？")) {
                 await fetch(`${API_BASE}/tasks/${task.id}`, { method: "DELETE" });
@@ -92,7 +92,7 @@ function startEditTask(li, task) {
 
     const saveBtn = document.createElement("button");
     saveBtn.className = "action-btn";
-    saveBtn.textContent = "保存";
+    saveBtn.innerHTML = `<span class="material-icons">save</span>`;
     saveBtn.onclick = async () => {
         const newTitle = inputEdit.value.trim();
         if (newTitle && newTitle !== task.title) {
@@ -110,7 +110,7 @@ function startEditTask(li, task) {
 
     const cancelBtn = document.createElement("button");
     cancelBtn.className = "action-btn";
-    cancelBtn.textContent = "キャンセル";
+    cancelBtn.innerHTML = `<span class="material-icons">close</span>`;
     cancelBtn.onclick = async () => {
         await loadTasks();
     };
